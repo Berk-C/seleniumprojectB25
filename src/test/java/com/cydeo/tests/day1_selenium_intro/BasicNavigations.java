@@ -21,5 +21,17 @@ public class BasicNavigations {
 
         //Use selenium to navigate back
         driver.navigate().back();
+
+        //Stop code execution for 3 second
+        Thread.sleep(3000);
+
+        // use selenium to navigate forward
+        driver.navigate().forward();
+
+        // use selenium to navigate refresh
+        driver.navigate().refresh();
+
+        //use navigate().to():
+        driver.navigate().to("https://google.com");
     }
 }
