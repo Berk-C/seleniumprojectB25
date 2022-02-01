@@ -19,7 +19,7 @@ public class BasicNavigations {
         //Stop code execution for 3 second
         Thread.sleep(3000);
 
-
+        //Use selenium to navigate back
         driver.navigate().back();
     }
 }
