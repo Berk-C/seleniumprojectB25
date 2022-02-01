@@ -13,14 +13,19 @@ public class Tast1_YahooTitleVerification {
 
         driver.manage().window().maximize();
 
-        driver.get("https://yahoo.com");
+        //2. Go to https://www.yahoo.com
+        driver.get("https://www.yahoo.com");
 
-        String currentTitle = driver.getTitle();
-        System.out.println("currentTitle = " + currentTitle);
+      String expectedTitle = "Yahoo | Mail, Weather, Search, Politics, News, Finance, Sports & Videos";
 
-        String currentURL =  driver.getCurrentUrl();
-        System.out.println("currentURL = " + currentURL);
+      String actualTitle = driver.getTitle();
 
-        driver.close();
+      if(actualTitle.equals(expectedTitle)){
+          System.out.println("Title is as expected. Verification PASSED!");
+      }else{
+          System.out.println("Title is NOT as expected. Verification FAILED!");
+      }
+
+
     }
 }
