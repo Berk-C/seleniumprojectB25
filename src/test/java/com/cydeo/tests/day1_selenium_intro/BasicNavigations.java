@@ -14,7 +14,8 @@ public class BasicNavigations {
         WebDriver driver = new ChromeDriver();
 
         //3- Go to tesla.com
-        driver.get("https://www.tesla.com");
+        driver.get("https://www.bmwusa.com");
+        String currentTitle = driver.getTitle();
 
         //Stop code execution for 3 second
         Thread.sleep(3000);
@@ -36,5 +37,11 @@ public class BasicNavigations {
 
         //use navigate().to():
         driver.navigate().to("https://google.com");
+        
+        // use .getTitle();
+        //System.out.println("driver.getTitle() = " + driver.getTitle());
+
+
+        System.out.println("currentTitle = " + currentTitle);
     }
 }
