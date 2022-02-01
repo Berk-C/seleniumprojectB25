@@ -17,6 +17,8 @@ public class BasicNavigations {
         driver.get("https://www.bmwusa.com");
         String currentTitle = driver.getTitle();
 
+        System.out.println("currentTitle = " + currentTitle);
+
         //Stop code execution for 3 second
         Thread.sleep(3000);
 
@@ -37,11 +39,16 @@ public class BasicNavigations {
 
         //use navigate().to():
         driver.navigate().to("https://google.com");
+        currentTitle = driver.getTitle();
         
         // use .getTitle();
         //System.out.println("driver.getTitle() = " + driver.getTitle());
 
 
         System.out.println("currentTitle = " + currentTitle);
+
+        // use getCurrent URL
+        String currentUrl = driver.getCurrentUrl();
+
     }
 }
